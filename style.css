@@ -1,0 +1,515 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:"Poppins",sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background:#f0f2f5;
+    color: #5f5f5f;
+}
+a{
+    text-decoration: none;
+    color:#5f5f5f;
+}
+
+/*-------inicio del Nav Bar--------------*/
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 6px 6%;
+    position: sticky;
+    top: 0;
+    z-index:100;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+.logo img{
+    width: 30px;
+    margin-right:15px;
+    display: block;
+}
+.navbar-cen ul li{
+    display: inline-block;
+    list-style:none;
+}
+.navbar-cen ul li a{
+    display:flex;
+    align-items:center;
+    font-size:14px;
+    margin: 5px 8px;
+    padding-right:5px;
+    position: relative;
+}
+.navbar-cen ul li a img{
+    width:30px
+}
+.navbar-cen ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #F47BB5;
+    position:absolute;
+    bottom: -15px;
+    transition: width 0.3s;
+}
+.navbar-cen ul li a:hover::after,.navbar-cen ul li a.link-activo::after{
+    width: 100%;
+
+}
+
+
+.nav-fotoperfil{
+    width: 40px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+.online{
+    position: relative;
+}
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    right: 0px;
+    top:0px;
+    background: #41db51;
+    position: absolute;
+}
+.barra-busqueda{
+    background: #f0f2f5;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.navbar-izq{
+    display: flex;
+    align-items: center;
+}
+.barra-busqueda img{
+   width: 14px;
+}
+.barra-busqueda input{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+/*-------fin del Nav Bar--------------*/
+/*-------Inicio del contenido--------------*/
+.contenedor{
+    padding: 20px 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+/*-------Contenido Barra Latera Izquierda--------------*/
+.barralateral-izq{
+    flex-basis:25%;
+    align-self: flex-start;
+}
+.contenedor-perfil{
+background: #fff;
+border-radius: 8px; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra ligera para toda la barra lateral */
+}
+.contenedor-perfil-info{
+    padding: 0 25px;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-perfil-info img{
+   width:90px;
+   border-radius:50%;
+   background: #fff;
+   padding: 4px;
+   margin-top: -45px;
+   justify-content: center;
+ 
+}
+.contenedor-perfil-info h1{
+  font-size: 20px;
+  font-weight: 600;
+  color:#222;
+}
+.contenedor-perfil-info h3{
+    font-size: 14px;
+    font-weight: 500;
+    color:#777;
+}
+.contenedor-perfil-info ul{
+    list-style: none;
+    margin:20px 0;
+}
+.contenedor-perfil-info ul li{
+   width:100%;
+   margin: 5px 0;
+   font-size:13px;
+}
+.contenedor-perfil-info ul li span{
+   float:right;
+   color: #F47BB5;
+    
+}
+
+
+.link-contenedor-perfil{
+    display: flex;
+    align-items: center;
+    border-top:1px solid #F47BB5;
+    flex-direction: column;
+    padding: 5px;
+}
+.link-contenedor-perfil a{
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    font: size 13px;
+   
+}
+.link-contenedor-perfil table {
+    width: 100%; /* Ajustar la tabla al ancho del contenedor */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+}
+
+.link-contenedor-perfil tr:first-child td {
+    border-bottom: 1px solid #F47BB5; /* Borde inferior para la primera fila */
+}
+
+.link-contenedor-perfil tr:last-child td {
+    border-top: 1px solid #F47BB5; /* Borde superior para la última fila */
+}
+
+.link-contenedor-perfil td {
+    padding: 7px; /* Añadir relleno a las celdas */
+}
+
+.link-contenedor-perfil img {
+    width:30px /* Estilos para las imágenes dentro de la tabla */
+}
+.link-contenedor-perfil p{
+    font-size: 14px;
+    font-weight: 500;
+    color:#777;
+}
+
+.barra-actividades{
+    background: #fff;
+    padding: 5px 25px;
+    margin: 12px 0;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra ligera para toda la barra lateral */
+}
+
+.barra-actividades ul{
+    list-style: none;
+    margin:20px 0;
+    
+}
+.barra-actividades ul li{
+   width:100%;
+   margin: 5px 0;
+   font-size:13px;
+  
+}
+.barra-actividades ul li span{
+    float:right;
+    color:#222;
+ }
+.barra-actividades ul li a{
+  color:#F47BB5;
+  font-weight: 500;
+ }
+.barra-actividades ul li span{
+   float:right;
+   color:#222;
+}
+.vermas{
+    border-top: 1px solid #F47BB5;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: -25px;
+    margin-left:-25px;
+}
+.vermas a{
+    display: inline-block;
+    margin: 10px 0;
+
+}
+
+/*-------Contenido Barra Latera Centro | Principal--------------*/
+.barralateral-centro{
+    flex-basis:47%;
+    
+}
+.nuevo_post{
+    background: #fff;
+    border-radius: 8px;
+}
+.crear-nuevo_post_input{
+    padding: 20px 25px 10px;
+    display: flex;
+    align-items: flex-start;
+}
+.crear-nuevo_post_input img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.crear-nuevo_post_input textarea{
+    width: 100%;
+    border: 1px solid #777;
+    border-radius: 20px;
+    outline: 0;
+    resize: none;
+    background: transparent;
+    margin-top: 8px;
+    padding: 1px;
+}
+::placeholder{
+    font-weight: 500;
+}
+.links_nuevo_post ul li{
+    display: inline-block;
+    list-style:none;
+}
+.links_nuevo_post ul li a{
+    display:flex;
+    align-items:center;
+    font-size:14px;
+    margin: 5px 8px;
+    padding-right:5px;
+    position: relative;
+}
+.links_nuevo_post ul li a img{
+    width:20px
+}
+.links_nuevo_post{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 6%;
+}
+.ordenarpor{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.ordenarpor hr{
+    flex: 1;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+
+}
+.ordenarpor p{
+    font-size: 13px;
+    padding-left: 5px;
+
+}
+.ordenarpor p span{
+    font-weight: 600;
+    cursor: pointer;
+}
+.ordenarpor p span img {
+    width: 12px;
+    margin-left: 3px;
+
+}
+.publicacion{
+    background: #fff;
+    padding: 20px 25px 5px;
+    margin: 5px 0 15px;
+    border-radius: 8px;
+}
+.publicacion p{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.publicacionpor{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.publicacionpor img{
+width: 35px;
+border-radius: 50%;
+margin-right: 10px;
+margin-top: 5px;
+}
+.publicacionpor h1{
+    font-size: 18px;
+    font-weight: 600;
+    color:#333;
+}
+.publicacionpor small{
+    display:block;
+    margin-bottom:-2px;
+}
+.estadopost{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+}
+.estadopost div{
+    display: flex;
+    align-items: center;
+}
+.estadopost div span{
+    font-size: 8px;
+}
+.estadopost img{
+    width: 15px;
+    margin-right: -5px;
+
+}
+.likiadopor{
+     margin-left: 10px;
+}
+.actividadpost{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size:14px;
+    font-weight: 500;
+
+}
+.actividadpost div{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*-------Contenido Barra Latera Derecha--------------*/
+.barralateral-der {
+    flex-basis: 25%;
+    align-self: flex-start;
+    font-family: 'Arial', sans-serif; /* Asegúrate de usar una fuente limpia y moderna */
+}
+
+.barra_noticias {
+    background: #fff;
+    padding: 10px 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra ligera para toda la barra lateral */
+    margin-bottom: 20px; /* Espacio debajo de la barra lateral */
+    border-radius: 8px; 
+}
+
+.icono-info {
+    width: 15px;
+    float: right;
+    margin-top: 15px;
+}
+
+.barra_noticias h3 {
+    font-size: 18px;
+    font-weight: bold; /* Texto en negrita */
+    color: #333;
+    margin: 10px 0;
+}
+
+.barra_noticias a {
+    font-size: 14px; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.barra_noticias span {
+    font-size: 12px;
+    color: #666; /* Color gris para la descripción */
+}
+
+.fotoperfil-info {
+    width: 48px; /* Tamaño específico de la imagen de perfil */
+    height: 48px; /* Altura para asegurar que la imagen es un círculo */
+    border-radius: 50%;
+    margin-right: 10px; /* Margen a la derecha de la imagen */
+}
+.barra_noticias table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.barra_noticias td {
+    padding: 8px 0; /* Padding para las celdas */
+}
+.barra_noticias p {
+    font-size: 14px;
+    text-decoration: none; /* No subrayado */
+    margin-top: 15px; /* Espacio encima del enlace */
+    cursor: pointer; /* Cursor tipo puntero */
+}
+.barra_noticias button {
+    background-color: transparent; /* sin color*/
+    border: 1px solid #f0f0f0; /* borde de color gris claro no tan grueso */
+    padding: 10px 20px; /* Espaciado interno para hacerlo más grande */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Ninguna decoración en el texto */
+    display: inline-block; /* Tipo de display */
+    font-size: 12px; /* Tamaño de la fuente */
+    margin: 2px 1px; /* Margen alrededor del botón */
+    transition-duration: 0.4s; /* Duración de la transición para efectos de hover */
+    cursor: pointer; /* Cursor en forma de puntero */
+    border-radius: 20px; /* Bordes redondeados */
+  }
+  
+  .barra_noticias button:hover {
+    background-color: #F47BB5; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Sombra al pasar el ratón */
+  }
+ 
+.barra_noticias button .plus-icon {
+    display: inline-block;
+    margin-right: 5px; /* Margen derecho para separar el icono del texto */
+  } 
+
+  .anuncios {
+    /* Añade cualquier estilo específico para la sección de anuncios aquí */
+    margin-bottom: 20px; /* Espacio debajo de la sección de anuncios */
+}
+
+.anuncios img {
+    width: 100%; /* Asegura que la imagen ocupa todo el ancho disponible */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ligera para darle profundidad */
+}
+
+.hipervinculos {
+    display: flex; /* Usa flexbox para organizar los enlaces */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0; /* Ajusta el padding según sea necesario */
+    
+}
+
+.hipervinculos a {
+    text-decoration: none; /* Remueve el subrayado de los enlaces */
+    padding: 5px 0; /* Añade un poco de padding para hacer los enlaces más grandes */
+    font-size: 12px; /* Ajusta el tamaño de la fuente según sea necesario */
+    margin-bottom: 5px; /* Espacio debajo de cada enlace */
+}
+
+.hipervinculos a:hover {
+    color: #F47BB5; /* Cambia el color del texto al pasar el cursor sobre el enlace */
+    text-decoration: underline; /* Añade un subrayado al pasar el cursor sobre el enlace */
+}
