@@ -290,14 +290,15 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra ligera para toda la barra late
 .crear-nuevo_post_input textarea{
     width: 100%;
     border: 1px solid #777;
-    border-radius: 20px;
+    border-radius: 5rem;
     outline: 0;
     resize: none;
     background: transparent;
     margin: 0 auto;
-    padding: 1px;
+    padding: 5px;
 }
 ::placeholder{
+    
     font-weight: 500;
 }
 .links_nuevo_post ul li{
