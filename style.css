@@ -64,6 +64,8 @@ a{
 
 .nav-fotoperfil{
     width: 40px;
+    height: 40px;
+    object-fit: cover;
     border-radius: 50%;
     display: block;
     cursor: pointer;
@@ -126,22 +128,33 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra ligera para toda la barra late
 }
 .contenedor-perfil-info{
     padding: 0 25px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .contenedor-perfil-info img{
    width:90px;
+   height: 80px;
+   object-fit: cover;
    border-radius:50%;
    background: #fff;
    padding: 4px;
    margin-top: -45px;
    justify-content: center;
+   display: flex;
+    
  
 }
 .contenedor-perfil-info h1{
+  display: flex;
   font-size: 20px;
   font-weight: 600;
   color:#222;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 .contenedor-perfil-info h3{
     font-size: 14px;
@@ -197,7 +210,8 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra ligera para toda la barra late
 }
 
 .link-contenedor-perfil img {
-    width:30px /* Estilos para las imágenes dentro de la tabla */
+    width: 30px; /* Estilos para las imágenes dentro de la tabla */
+   
 }
 .link-contenedor-perfil p{
     font-size: 14px;
@@ -262,10 +276,14 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra ligera para toda la barra late
 .crear-nuevo_post_input{
     padding: 20px 25px 10px;
     display: flex;
-    align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
+
 .crear-nuevo_post_input img{
-    width: 35px;
+    width:50 px;
+    height:40px;
+    object-fit: cover;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -276,7 +294,7 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra ligera para toda la barra late
     outline: 0;
     resize: none;
     background: transparent;
-    margin-top: 8px;
+    margin: 0 auto;
     padding: 1px;
 }
 ::placeholder{
@@ -512,4 +530,21 @@ margin-top: 5px;
 .hipervinculos a:hover {
     color: #F47BB5; /* Cambia el color del texto al pasar el cursor sobre el enlace */
     text-decoration: underline; /* Añade un subrayado al pasar el cursor sobre el enlace */
+}
+
+
+.links_nuevo_post ul li a:hover {
+    background-color: #ffe0f0; /* Cambia a un tono rosado claro */
+    border-radius: 4px; /* Si deseas bordes redondeados */
+    
+  }
+  .actividadpost div:hover {
+    background-color: #ffe0f0; /* Este será el color de fondo rosado claro en hover */
+    border-radius: 4px; /* Redondea las esquinas si lo deseas */
+    cursor: pointer; /* Cambia el cursor para indicar que es clickable */
+  }
+  .hipervinculos a img {
+    width: 12px;
+    margin-left: 3px;
+
 }
