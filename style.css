@@ -23,7 +23,7 @@ a{
     padding: 6px 6%;
     position: sticky;
     top: 0;
-    z-index:100;
+    z-index:101;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
 }
@@ -421,7 +421,9 @@ margin-top: 5px;
 .barralateral-der {
     flex-basis: 25%;
     align-self: flex-start;
-    font-family: 'Arial', sans-serif; /* Asegúrate de usar una fuente limpia y moderna */
+    position: sticky; /* Establece la posición pegajosa */
+    top: 70px; /* Altura del navbar */
+    z-index: 100; /* Ajusta el z-index según sea necesario para superponer otros elementos */
 }
 
 .barra_noticias {
