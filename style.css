@@ -319,7 +319,7 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra ligera para toda la barra late
 .links_nuevo_post{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 6px 6%;
 }
 .ordenarpor{
